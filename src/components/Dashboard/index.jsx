@@ -6,10 +6,13 @@ import Carousel from '../Carousel';
 const Dashboard = () => {
   const dispatch = useDispatch();
   const movies = useSelector((store) => store.moviesReducer);
+
   const categories = ['upcoming', 'top_rated', 'popular'];
+
   useEffect(() => {
     categories.forEach((category) => dispatch(loadMovies(category)));
   }, []);
+
   return (
     <>
       <h1>Dashboard</h1>
