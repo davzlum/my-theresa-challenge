@@ -13,7 +13,7 @@ const Carousel = ({ categoryMovies, category }) => {
           <ul className="carousel">
             {categoryMovies.map((movie) => (
               <li key={movie.id} className="carousel__item">
-                <Link to={`/${movie.id}`}>
+                <Link to={`/${movie.id}/${category}`}>
                   <img className="carousel__img" src={`${baseImgUrl}${movie.poster_path}`} alt="" />
                 </Link>
               </li>
