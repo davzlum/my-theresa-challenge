@@ -9,7 +9,7 @@ export default function loadMovies(category) {
       const { data } = await axios(`https://api.themoviedb.org/3/movie/${category}?api_key=${API_KEY}&language=en-US&page=1`);
       dispatch({
         type: actionTypes.LOAD_MOVIES,
-        movies: data,
+        movies: data.results,
         category,
       });
     } catch (error) {
