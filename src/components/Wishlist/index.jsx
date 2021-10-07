@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import WishlistButton from '../WishlistButton';
 
 function Wishlist() {
   const wishlist = useSelector((store) => store.wishlistReducer);
@@ -11,7 +13,10 @@ function Wishlist() {
         {wishlist.length
           ? wishlist.map((movie) => (
             <li>
-              <img className="wishlist__img" src={`${baseImgUrl}${movie.poster_path}`} alt="" />
+              <Link to={`/movie/${movie.id}`}>
+                <img className="wishlist__img" src={`${baseImgUrl}${movie.poster_path}`} alt="" />
+              </Link>
+              <WishlistButton movieData={movie} />
             </li>
           ))
           : ''}
