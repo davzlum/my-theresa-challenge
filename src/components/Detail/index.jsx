@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadMovie } from '../../redux/actions/actionCreators';
+import { loadMovie, toggleFavorite } from '../../redux/actions/actionCreators';
 import favoriteEmpty from '../../assets/heart-regular.svg';
 import favoriteSolid from '../../assets/heart-solid.svg';
 
 const Detail = () => {
-  const { movieId, category } = useParams();
+  const { movieId } = useParams();
   const dispatch = useDispatch();
   let movieData = useSelector((store) => store.movieReducer);
+  const wishlist = useSelector((store) => store.wishlistReducer);
   const baseImgUrl = 'https://image.tmdb.org/t/p/original';
 
   movieData = {
     ...movieData,
-    isFavorite: wishlist[category]?.some((fav) => fav.id === movieData.id),
+    isFavorite: wishlist.some((fav) => fav.id === movieData.id),
   };
 
   useEffect(() => {

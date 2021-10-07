@@ -36,7 +36,7 @@ export function loadMovie(movieId) {
   };
 }
 
-export default function toggleFavorite(movieData) {
+export function toggleFavorite(movieData) {
   return ({
     type: movieData.isFavorite
       ? actionTypes.DELETE_FROM_WISHLIST

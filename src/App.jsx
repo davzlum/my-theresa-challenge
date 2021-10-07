@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Dashboard} />
-        <Route exact path="/:movieId/:category" component={Detail} />
+        <Route exact path="/:movieId" component={Detail} />
         <Redirect to="/" />
       </Switch>
     </Router>
