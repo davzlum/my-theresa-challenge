@@ -6,23 +6,12 @@ import Carousel from '../Carousel';
 const Dashboard = () => {
   const dispatch = useDispatch();
   const movies = useSelector((store) => store.moviesReducer);
-  // const wishlist = useSelector((store) => store.wishlistReducer);
+
   const categories = ['upcoming', 'top_rated', 'popular'];
 
   useEffect(() => {
     categories.forEach((category) => dispatch(loadMovies(category)));
   }, []);
-
-  // let newMovies = [];
-  // categories.forEach((category) => {
-  //   newMovies = {
-  //     ...newMovies,
-  //     [category]: movies[category]?.map((movie) => ({
-  //       ...movie,
-  //       isFavorite: wishlist.length ? wishlist.some((fav) => fav.id === movie.id) : false,
-  //     })),
-  //   };
-  // });
 
   return (
     <>
