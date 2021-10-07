@@ -35,3 +35,12 @@ export function loadMovie(movieId) {
     }
   };
 }
+
+export default function toggleFavorite(movieData) {
+  return ({
+    type: movieData.isFavorite
+      ? actionTypes.DELETE_FROM_WISHLIST
+      : actionTypes.ADD_TO_WISHLIST,
+    movieData,
+  });
+}
