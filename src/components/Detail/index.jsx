@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadMovie, toggleFavorite } from '../../redux/actions/actionCreators';
-import favoriteEmpty from '../../assets/heart-regular.svg';
-import favoriteSolid from '../../assets/heart-solid.svg';
+import { loadMovie } from '../../redux/actions/actionCreators';
+import WishlistButton from '../WishlistButton';
 import './style.scss';
 
 const Detail = () => {
@@ -25,19 +24,7 @@ const Detail = () => {
       <h1>{movieData.original_title}</h1>
       <p>{movieData.overview}</p>
       <img className="detail__img" src={`${baseImgUrl}${movieData.poster_path}`} alt="" />
-      <button
-        type="button"
-        className="favorite-button"
-        onClick={() => {
-          dispatch(toggleFavorite(movieData));
-        }}
-      >
-        <img
-          src={movieData.isFavorite
-            ? favoriteSolid : favoriteEmpty}
-          alt="favorite"
-        />
-      </button>
+      <WishlistButton movieData={movieData} />
     </>
   );
 };
