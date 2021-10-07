@@ -2,10 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import WishlistButton from '../WishlistButton';
+import './style.scss';
 
 function Wishlist() {
-  const wishlist = useSelector((store) => store.wishlistReducer);
+  let wishlist = useSelector((store) => store.wishlistReducer);
   const baseImgUrl = 'https://image.tmdb.org/t/p/original';
+
+  wishlist = wishlist.map((movie) => ({ ...movie, isFavorite: true }));
 
   return (
     <>
