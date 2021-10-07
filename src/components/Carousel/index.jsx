@@ -1,5 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import './style.scss';
 
 const Carousel = ({ categoryMovies, category }) => {
   console.log(categoryMovies);
@@ -8,13 +9,15 @@ const Carousel = ({ categoryMovies, category }) => {
     <>
       <h2>{category}</h2>
       <div className="carousel-container">
-        <button type="button" className="carousel-previous">prev</button>
-        <figure className="carousel">
-          <ul>
-            {categoryMovies.map((movie) => <li><img className="slider__image" key={movie.id} src={`${baseImgUrl}${movie.backdrop_path}`} alt="" /></li>)}
+        <figure>
+          <ul className="carousel">
+            {categoryMovies.map((movie) => (
+              <li className="carousel__item">
+                <img className="carousel__img" key={movie.id} src={`${baseImgUrl}${movie.poster_path}`} alt="" />
+              </li>
+            ))}
           </ul>
         </figure>
-        <button type="button" className="carousel-advance">Next</button>
       </div>
     </>
   );
