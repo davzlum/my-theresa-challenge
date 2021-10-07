@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadMovies } from '../../redux/actions/actionCreators';
 import Carousel from '../Carousel';
@@ -27,6 +28,7 @@ const Dashboard = () => {
   return (
     <>
       <h1>Dashboard</h1>
+      <Link to="/wishlist">Wishlist</Link>
       <Carousel categoryMovies={movies.popular} category="popular" />
       <Carousel categoryMovies={movies.upcoming} category="upcoming" />
       <Carousel categoryMovies={movies.top_rated} category="top_rated" />
