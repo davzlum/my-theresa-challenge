@@ -10,6 +10,7 @@ export default function loadMovies(category) {
       dispatch({
         type: actionTypes.LOAD_MOVIES,
         movies: data,
+        category,
       });
     } catch (error) {
       dispatch({
