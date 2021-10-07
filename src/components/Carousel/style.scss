@@ -1,0 +1,23 @@
+.carousel-container {
+    padding: 0 15px 30px;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    }
+
+.carousel__item{
+        position: relative;
+        flex: 0 0 auto;
+        padding: 5px 5px;
+        width: 15%;
+        .carousel__img {
+            height: 300px;
+            border: 3px solid transparent;
+        }
+}
