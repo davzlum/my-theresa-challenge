@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function Wishlist() {
@@ -8,7 +7,6 @@ function Wishlist() {
 
   return (
     <>
-      <button type="button"><Link to="/">Go to collection</Link></button>
       <ul>
         {wishlist.length
           ? wishlist.map((movie) => (

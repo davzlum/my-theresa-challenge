@@ -8,10 +8,12 @@ import {
 import Dashboard from './components/Dashboard';
 import Detail from './components/Detail';
 import Wishlist from './components/Wishlist';
+import Header from './components/Header';
 
 function App() {
   return (
     <Router>
+      <Header />
       <Switch>
         <Route exact path="/" component={Dashboard} />
         <Route exact path="/movie/:movieId" component={Detail} />

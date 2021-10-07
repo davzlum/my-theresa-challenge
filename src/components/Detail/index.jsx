@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadMovie, toggleFavorite } from '../../redux/actions/actionCreators';
 import favoriteEmpty from '../../assets/heart-regular.svg';
@@ -38,7 +38,6 @@ const Detail = () => {
           alt="favorite"
         />
       </button>
-      <button type="button"><Link to="/">Go to collection</Link></button>
     </>
   );
 };
