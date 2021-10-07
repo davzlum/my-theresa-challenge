@@ -8,9 +8,7 @@ function moviesReducer(wishlist = [], action) {
         action.movieData,
       ];
     case actionTypes.DELETE_FROM_WISHLIST:
-      return [
-        wishlist.filter((favoriteItem) => favoriteItem.id !== action.movieData.id),
-      ];
+      return wishlist.filter((favoriteItem) => favoriteItem.id !== action.movieData.id);
     default:
       break;
   }
