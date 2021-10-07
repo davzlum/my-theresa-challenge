@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import './style.scss';
 
 const Carousel = ({ categoryMovies, category }) => {
-  console.log(categoryMovies);
   const baseImgUrl = 'https://image.tmdb.org/t/p/original';
   return (
     <>
@@ -12,8 +12,10 @@ const Carousel = ({ categoryMovies, category }) => {
         <figure>
           <ul className="carousel">
             {categoryMovies.map((movie) => (
-              <li className="carousel__item">
-                <img className="carousel__img" key={movie.id} src={`${baseImgUrl}${movie.poster_path}`} alt="" />
+              <li key={movie.id} className="carousel__item">
+                <Link to={`/${movie.id}`}>
+                  <img className="carousel__img" src={`${baseImgUrl}${movie.poster_path}`} alt="" />
+                </Link>
               </li>
             ))}
           </ul>
