@@ -3,8 +3,8 @@
 
 .header{
     @include flex-content(flex, row, space-between, center);
-    height: 150px;
-    background-color: darkslategray;
+    height: 120px;
+    background-color: $color-dark;
     padding: 0 7%;
     color: white;
     .header-logo{
@@ -14,17 +14,13 @@
     }
     .header-nav{
         @include flex-content(flex, row, space-between, center);
-        width: 200px;
+        width: 250px;
         &__button{
             background-color: transparent;
             outline: none;
             border: none;
             font-size: 20px;
-        }
-        &__button:hover{
-            a{
-                color: rgb(223, 182, 0);
-            }
+            font-weight: bold;
         }
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './style.scss';
 
 function Header() {
@@ -7,8 +7,8 @@ function Header() {
     <header className="header">
       <h1 className="header-logo">DataMovie</h1>
       <nav className="header-nav">
-        <button className="header-nav__button" type="button"><Link to="/">Dashboard</Link></button>
-        <button className="header-nav__button" type="button"><Link to="/wishlist">Wishlist</Link></button>
+        <button className="header-nav__button" type="button"><NavLink exact activeStyle={{ color: '#ffe300' }} to="/">Dashboard</NavLink></button>
+        <button className="header-nav__button" type="button"><NavLink activeStyle={{ color: '#ffe300' }} to="/wishlist">Wishlist</NavLink></button>
       </nav>
     </header>
   );
