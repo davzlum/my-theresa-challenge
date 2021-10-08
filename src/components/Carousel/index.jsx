@@ -14,7 +14,7 @@ const Carousel = ({ categoryMovies, category }) => {
             {categoryMovies.map((movie) => (
               <li key={movie.id} className="carousel__item">
                 <Link to={`/${category}/${movie.id}`}>
-                  <img className="carousel__img" src={`${baseImgUrl}${movie.poster_path}`} alt="" />
+                  <img className="carousel__img" src={`${baseImgUrl}${movie.poster_path}`} alt={movie.original_title} />
                 </Link>
               </li>
             ))}
@@ -26,7 +26,10 @@ const Carousel = ({ categoryMovies, category }) => {
 };
 
 Carousel.propTypes = {
-  categoryMovies: PropTypes.shape([]).isRequired,
+  categoryMovies: PropTypes.shape([{
+    id: PropTypes.number.isRequired,
+    original_title: PropTypes.string.isRequired,
+  }]).isRequired,
   category: PropTypes.string.isRequired,
 };
 
