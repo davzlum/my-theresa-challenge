@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './style.scss';
 
 function Header() {
   return (
-    <header>
-      <h1>DataMovie</h1>
-      <button type="button"><Link to="/">Go to collection</Link></button>
-      <button type="button"><Link to="/wishlist">Go to wishlist</Link></button>
+    <header className="header">
+      <h1 className="header-logo">DataMovie</h1>
+      <nav className="header-nav">
+        <button className="header-nav__button" type="button"><Link to="/">Dashboard</Link></button>
+        <button className="header-nav__button" type="button"><Link to="/wishlist">Wishlist</Link></button>
+      </nav>
     </header>
   );
 }
