@@ -15,7 +15,7 @@ function WishlistButton({ movieData, style }) {
         dispatch(toggleWishlist(movieData));
       }}
     >
-      {movieData?.isFavorite ? '- Remove from wishlist' : '+ Add to wishlist'}
+      {movieData?.isFavorite ? 'x Remove from wishlist' : '+ Add to wishlist'}
 
     </button>
   );

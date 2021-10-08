@@ -1,6 +1,6 @@
 %message-shared{
     @include flex-content(flex, column, center, center);
-    padding: 50px;
+    padding: 80px;
     border-radius: 30px;
     .detail-container__top{
         @include flex-content(flex, row, center, center);
@@ -10,7 +10,7 @@
         .info-container{
             @include flex-content(flex, column, space-around, flex-start);
             padding-left: 50px;
-            height:300px;
+            height:500px;
             .movie-title{
                 font-size: 35px;
                 font-weight: bold;

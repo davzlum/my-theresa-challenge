@@ -1,14 +1,21 @@
+@import './../../styles/button-shared.scss';
+@import './../../styles/color.scss';
+@import './../../styles/mixin.scss';
+
 .button-popular {
+    @extend %button-shared;
     background-color: black;
     color: white;
 }
 
 .button-upcoming {
+    @extend %button-shared;
     background-color: rgb(97, 1, 100);
     color: rgb(255, 238, 4);
 }
 
 .button-top-rated {
+    @extend %button-shared;
     background-color: rgb(16, 0, 240);
     color: rgb(60, 231, 88);
 }
