@@ -20,12 +20,21 @@ const Detail = () => {
     dispatch(loadMovie(movieId));
   }, []);
   return (
-    <>
-      <h1>{movieData.original_title}</h1>
-      <p>{movieData.overview}</p>
-      <img className="detail__img" src={`${baseImgUrl}${movieData.poster_path}`} alt="" />
-      <WishlistButton movieData={movieData} style={category} />
-    </>
+    <main className="main">
+      <div className="detail-container">
+        <div className="detail-container__top">
+          <img className="detail-img" src={`${baseImgUrl}${movieData.poster_path}`} alt="" />
+          <div className="info-container">
+            <WishlistButton movieData={movieData} style={category} />
+            <h3 className="movie-title">{movieData.original_title}</h3>
+            <p className="movie-description">{movieData.overview}</p>
+          </div>
+        </div>
+        <div className="detail-container__bottom">
+          <h4>Additional information</h4>
+        </div>
+      </div>
+    </main>
   );
 };
 

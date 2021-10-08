@@ -18,7 +18,7 @@ const Dashboard = () => {
     <main className="main">
       <Carousel categoryMovies={movies.popular} category="popular" />
       <Carousel categoryMovies={movies.upcoming} category="upcoming" />
-      <Carousel categoryMovies={movies.top_rated} category="top_rated" />
+      <Carousel categoryMovies={movies.top_rated} category="top rated" />
     </main>
   );
 };
