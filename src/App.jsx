@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Dashboard} />
-        <Route exact path="/movie/:movieId" component={Detail} />
+        <Route exact path="/:category/:movieId" component={Detail} />
         <Route exact path="/wishlist" component={Wishlist} />
         <Redirect to="/" />
       </Switch>

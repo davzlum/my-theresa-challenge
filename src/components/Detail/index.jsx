@@ -6,7 +6,7 @@ import WishlistButton from '../WishlistButton';
 import './style.scss';
 
 const Detail = () => {
-  const { movieId } = useParams();
+  const { movieId, category } = useParams();
   const dispatch = useDispatch();
   let movieData = useSelector((store) => store.movieReducer);
   const wishlist = useSelector((store) => store.wishlistReducer);
@@ -24,7 +24,7 @@ const Detail = () => {
       <h1>{movieData.original_title}</h1>
       <p>{movieData.overview}</p>
       <img className="detail__img" src={`${baseImgUrl}${movieData.poster_path}`} alt="" />
-      <WishlistButton movieData={movieData} />
+      <WishlistButton movieData={movieData} style={category} />
     </>
   );
 };

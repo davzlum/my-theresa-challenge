@@ -2,25 +2,20 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { toggleFavorite } from '../../redux/actions/actionCreators';
-import favoriteEmpty from '../../assets/heart-regular.svg';
-import favoriteSolid from '../../assets/heart-solid.svg';
 import './style.scss';
 
-function WishlistButton({ movieData }) {
+function WishlistButton({ movieData, style }) {
   const dispatch = useDispatch();
   return (
     <button
       type="button"
-      className="favorite-button"
+      className={style === 'popular' ? 'button-popular' : style === 'upcoming' ? 'button-upcoming' : 'button-top-rated'}
       onClick={() => {
         dispatch(toggleFavorite(movieData));
       }}
     >
-      <img
-        src={movieData.isFavorite
-          ? favoriteSolid : favoriteEmpty}
-        alt="favorite"
-      />
+      {movieData.isFavorite ? '- Remove from wishlist' : '+ Add to wishlist'}
+
     </button>
   );
 }
@@ -29,6 +24,7 @@ WishlistButton.propTypes = {
   movieData: PropTypes.shape({
     isFavorite: PropTypes.bool.isRequired,
   }).isRequired,
+  style: PropTypes.string.isRequired,
 };
 
 export default WishlistButton;
