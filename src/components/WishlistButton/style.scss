@@ -1,9 +1,17 @@
-.favorite-button {
-    background-color: transparent;
-    border: none;
-    width: 50px;
-    height: 50px;
-    img{
-        width: auto;
-    }
+.button-popular {
+    background-color: black;
+    color: white;
 }
+
+.button-upcoming {
+    background-color: rgb(97, 1, 100);
+    color: rgb(255, 238, 4);
+}
+
+.button-top-rated {
+    background-color: rgb(16, 0, 240);
+    color: rgb(60, 231, 88);
+}
+
+
+
