@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { toggleFavorite } from '../../redux/actions/actionCreators';
+import { toggleWishlist } from '../../redux/actions/actionCreators';
 import './style.scss';
 
 function WishlistButton({ movieData, style }) {
@@ -11,7 +11,7 @@ function WishlistButton({ movieData, style }) {
       type="button"
       className={style === 'popular' ? 'button-popular' : style === 'upcoming' ? 'button-upcoming' : 'button-top-rated'}
       onClick={() => {
-        dispatch(toggleFavorite(movieData));
+        dispatch(toggleWishlist(movieData));
       }}
     >
       {movieData.isFavorite ? '- Remove from wishlist' : '+ Add to wishlist'}
