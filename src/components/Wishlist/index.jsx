@@ -19,10 +19,11 @@ function Wishlist() {
               <Link to={`/movie/${movie.id}`}>
                 <img className="wishlist__img" src={`${baseImgUrl}${movie.poster_path}`} alt="" />
               </Link>
+              <p>{movie.original_title}</p>
               <WishlistButton movieData={movie} />
             </li>
           ))
-          : ''}
+          : 'There are not movies in your wishlist'}
       </ul>
     </>
   );
