@@ -9,12 +9,13 @@ function WishlistButton({ movieData, style }) {
   return (
     <button
       type="button"
+      data-testid="wishlist-button"
       className={style === 'popular' ? 'button-popular' : style === 'upcoming' ? 'button-upcoming' : 'button-top-rated'}
       onClick={() => {
         dispatch(toggleWishlist(movieData));
       }}
     >
-      {movieData.isFavorite ? '- Remove from wishlist' : '+ Add to wishlist'}
+      {movieData?.isFavorite ? '- Remove from wishlist' : '+ Add to wishlist'}
 
     </button>
   );
