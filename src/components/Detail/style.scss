@@ -1,35 +1,22 @@
 @import './../../styles/color.scss';
 @import './../../styles/mixin.scss';
+@import './../../styles/extends';
 
 .main{
-    background-color: $color-gray-medium;
-    color: $color-dark;
-    padding: 40px 7% 100px;
-    .detail-container{
-        @include flex-content(flex, column, center, center);
-        padding: 50px;
-        border-radius: 30px;
+    .detail-container-yellow{
+        @extend %message-shared;
         background-color: $color-yellow;
-        &__top{
-            @include flex-content(flex, row, center, center);
-            .detail-img{
-                height: 500px;
-            }
-            .info-container{
-                @include flex-content(flex, column, space-around, flex-start);
-                padding-left: 50px;
-                height:300px;
-                .movie-title{
-                    font-size: 35px;
-                    font-weight: bold;
-                }
-                .movie-description{
-                    font-size: 25px;
-                }
-            }
-        }
-        &__bottom{
-
-        }
+        color: $color-black;
     }
+    .detail-container-violet{
+        @extend %message-shared;
+        background-color: $color-violet;
+        color: $color-white;
+    }
+    .detail-container-red{
+        @extend %message-shared;
+        background-color: $color-red;
+        color: $color-white;
+    }
+
 }
