@@ -8,12 +8,13 @@
             height: 500px;
         }
         .info-container{
-            @include flex-content(flex, column, space-around, flex-start);
+            @include flex-content(flex, column, flex-start, flex-start);
             padding-left: 50px;
             height:500px;
             .movie-title{
                 font-size: 35px;
                 font-weight: bold;
+                margin: 80px 0 20px;
             }
             .movie-description{
                 font-size: 25px;

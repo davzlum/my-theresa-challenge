@@ -2,22 +2,22 @@
 @import './../../styles/color.scss';
 @import './../../styles/mixin.scss';
 
-.button-popular {
+.button-top-rated{
     @extend %button-shared;
-    background-color: black;
-    color: white;
+    background-color: $color-dark;
+    color: $color-white;
 }
 
 .button-upcoming {
     @extend %button-shared;
-    background-color: rgb(97, 1, 100);
-    color: rgb(255, 238, 4);
+    background-color: $color-white;
+    color: $color-dark;
 }
 
-.button-top-rated {
+.button-popular {
     @extend %button-shared;
-    background-color: rgb(16, 0, 240);
-    color: rgb(60, 231, 88);
+    background-color: $color-violet;
+    color: $color-white;
 }
 
 

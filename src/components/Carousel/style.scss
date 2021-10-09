@@ -1,3 +1,5 @@
+@import './../../styles/color.scss';
+
 .carousel{
     padding-bottom: 40px;
     &__title{
@@ -8,7 +10,7 @@
         .container-list {
             display: flex;
             flex-wrap: nowrap;
-            overflow: hidden;
+            overflow: scroll;
             white-space: nowrap;
             margin: 0;
             padding: 0;
@@ -17,15 +19,50 @@
                 .item-img {
                     height: 300px;
                     border: 3px solid transparent;
+                    &:hover{
+                        border: 4px solid $color-yellow;
+                    } 
                 }
-                .item-img:hover{
-                    border: 4px solid rgb(223, 182, 0);
-                } 
             }  
         }
-
     }
 }
+
+//scrollbar styles
+::-webkit-scrollbar{
+    width: 10px;
+    background: $color-gray-medium;
+  }
+  ::-webkit-scrollbar:vertical{
+    display: none;
+  }
+  ::-webkit-scrollbar-button{
+    width:8px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track{
+    background:#3c454e;
+    border:thin solid #1a1f25;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: -webkit-linear-gradient(top, #2b2b2b, #494949);
+    -webkit-box-shadow:   inset 0 1px 0 rgba(175, 175, 175, 0.5),
+                  inset 1px 0 0 rgba(196, 196, 196, 0.4),
+                  inset 0 1px 2px rgba(155, 155, 155, 0.3);
+    border:thin solid #232c34;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+      background: -webkit-linear-gradient(top, #464646, #616161);
+  }
+  
+  ::-webkit-scrollbar-thumb:window-inactive {
+      background: rgba(97, 97, 97, 0.6); 
+  }
 
 
 

@@ -11,21 +11,20 @@ function Wishlist() {
   wishlist = wishlist.map((movie) => ({ ...movie, isFavorite: true }));
 
   return (
-    <>
-      <ul>
+    <main className="main">
+      <ul className="wishlist-container">
         {wishlist.length
           ? wishlist.map((movie) => (
-            <li>
+            <li className="wishlist-item">
               <Link to={`/movie/${movie.id}`}>
-                <img className="wishlist__img" src={`${baseImgUrl}${movie.poster_path}`} alt="" />
+                <img className="wishlist-img" src={`${baseImgUrl}${movie.poster_path}`} alt="" />
               </Link>
-              <p>{movie.original_title}</p>
               <WishlistButton movieData={movie} />
             </li>
           ))
           : 'There are not movies in your wishlist'}
       </ul>
-    </>
+    </main>
   );
 }
 
