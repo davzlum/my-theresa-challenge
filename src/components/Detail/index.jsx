@@ -21,6 +21,7 @@ const Detail = () => {
   }, []);
   return (
     <main className="main">
+      <h2 className="section-title">{`${category} movies`}</h2>
       <div className={category === 'popular' ? 'detail-container-yellow' : category === 'upcoming' ? 'detail-container-red' : 'detail-container-violet'}>
         <div className="detail-container__top">
           <img className="detail-img" src={`${baseImgUrl}${movieData.poster_path}`} alt="" />

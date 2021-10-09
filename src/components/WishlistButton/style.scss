@@ -4,20 +4,29 @@
 
 .button-top-rated{
     @extend %button-shared;
-    background-color: $color-dark;
+    background-color: $color-black;
     color: $color-white;
+    &:hover{
+        background-color: $color-black-light;
+    }
 }
 
 .button-upcoming {
     @extend %button-shared;
     background-color: $color-white;
     color: $color-dark;
+    &:hover{
+        background-color: $color-white-light;
+    }
 }
 
 .button-popular {
     @extend %button-shared;
     background-color: $color-violet;
     color: $color-white;
+    &:hover{
+        background-color: $color-violet-light;
+    }
 }
 
 
