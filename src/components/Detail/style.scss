@@ -1,3 +1,22 @@
-.detail__img{
-    height: 500px;
+@import './../../styles/color.scss';
+@import './../../styles/mixin.scss';
+@import './../../styles/extends';
+
+.main{
+    .detail-container-yellow{
+        @extend %message-shared;
+        background-color: $color-yellow;
+        color: $color-black;
+    }
+    .detail-container-violet{
+        @extend %message-shared;
+        background-color: $color-violet;
+        color: $color-white;
+    }
+    .detail-container-red{
+        @extend %message-shared;
+        background-color: $color-red;
+        color: $color-white;
+    }
+
 }

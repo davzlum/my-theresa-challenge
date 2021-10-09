@@ -1,16 +1,23 @@
-.button-popular {
-    background-color: black;
-    color: white;
+@import './../../styles/button-shared.scss';
+@import './../../styles/color.scss';
+@import './../../styles/mixin.scss';
+
+.button-top-rated{
+    @extend %button-shared;
+    background-color: $color-dark;
+    color: $color-white;
 }
 
 .button-upcoming {
-    background-color: rgb(97, 1, 100);
-    color: rgb(255, 238, 4);
+    @extend %button-shared;
+    background-color: $color-white;
+    color: $color-dark;
 }
 
-.button-top-rated {
-    background-color: rgb(16, 0, 240);
-    color: rgb(60, 231, 88);
+.button-popular {
+    @extend %button-shared;
+    background-color: $color-violet;
+    color: $color-white;
 }
 
 

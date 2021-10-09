@@ -6,22 +6,20 @@ import './style.scss';
 const Carousel = ({ categoryMovies, category }) => {
   const baseImgUrl = 'https://image.tmdb.org/t/p/original';
   return (
-    <>
-      <h2>{category}</h2>
-      <div className="carousel-container">
-        <figure>
-          <ul className="carousel">
-            {categoryMovies.map((movie) => (
-              <li key={movie.id} className="carousel__item">
-                <Link to={`/${category}/${movie.id}`}>
-                  <img className="carousel__img" src={`${baseImgUrl}${movie.poster_path}`} alt={movie.original_title} />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </figure>
+    <div className="carousel">
+      <h2 className="carousel__title">{`${category} movies`}</h2>
+      <div className="carousel__container">
+        <ul className="container-list">
+          {categoryMovies.map((movie) => (
+            <li key={movie.id} className="container-item">
+              <Link to={`/${category}/${movie.id}`}>
+                <img className="item-img" src={`${baseImgUrl}${movie.poster_path}`} alt={movie.original_title} />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-    </>
+    </div>
   );
 };
 
