@@ -1,0 +1,65 @@
+@import './color.scss';
+
+%detail-card-shared{
+    @include flex-content(flex, column, center, center);
+    padding: 80px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px $color-dark;
+    .detail-container__top{
+        @include flex-content(flex, row, center, center);
+        .detail-img{
+            height: 500px;
+        }
+        .info-container{
+            @include flex-content(flex, column, flex-start, flex-start);
+            padding-left: 50px;
+            height:500px;
+            &__top{
+                @include flex-content(flex, row, space-between, flex-start);
+                width: 100%;
+                padding: 0 30px 0 0;
+                .circle-rate{
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    background:url('./../assets/star-solid.svg') no-repeat;
+                    color: white;
+                    .circle-text{
+                        font-size: 30px;
+                        position: absolute;
+                        right: 31px;
+                        top:31px;
+                    }
+                }
+            }
+            .movie-title{
+                font-size: 35px;
+                font-weight: bold;
+                margin: 80px 0 20px;
+            }
+            .movie-description{
+                font-size: 25px;
+            }
+        }
+    }
+    .detail-container__bottom{
+        width: 100%;
+        @include flex-content(flex, row, space-between, flex-start);
+        margin-top: 30px;
+        background-color: rgba(0,0,0,0.3);
+        padding: 30px 50px;
+        height: auto;
+        border-radius: 30px;
+        font-size: 25px;
+        font-weight: 700;
+        .additional-info-container{
+            width: 100%;
+            .info-title{
+                padding-bottom: 10px;
+                .info-item{
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}
