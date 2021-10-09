@@ -1,22 +1,30 @@
 @import './../../styles/color.scss';
 @import './../../styles/mixin.scss';
-@import './../../styles/extends';
+@import './../../styles/detail-card.scss';
 
 .main{
+    .section-title{
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        font-size: 25px;
+    }
     .detail-container-yellow{
-        @extend %message-shared;
-        background-color: $color-yellow;
+        @extend %detail-card-shared;
+        background: linear-gradient(180deg, rgba(255,237,0,0.9) 0%, rgba(187,159,0,0.9) 100%);
         color: $color-black;
+        font-family: 'Lucida Sans';
     }
     .detail-container-violet{
-        @extend %message-shared;
-        background-color: $color-violet;
+        @extend %detail-card-shared;
+        background: linear-gradient(180deg, rgba(112,0,161,0.9) 0%, rgba(76,0,101,0.9) 100%);
         color: $color-white;
+        font-family: 'Times New Roman';
     }
     .detail-container-red{
-        @extend %message-shared;
-        background-color: $color-red;
+        @extend %detail-card-shared;
+        background: linear-gradient(180deg, rgba(207,0,0,0.9) 0%, rgba(140,0,0,0.9) 100%);
         color: $color-white;
+        font-family: Impact;
     }
 
 }
