@@ -1,7 +1,7 @@
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
-const API_KEY = '676fcc92f08e6b8bd969d6b857cce0c4';
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export function loadMovies(category) {
   return async (dispatch) => {
